@@ -1,0 +1,99 @@
+/* UserReviews.css */
+.reviews-section {
+    width: 95%;
+    max-width: 1400px;
+    margin: 40px auto;
+}
+
+.reviews-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.reviews-header h2 {
+    font-size: 26px;
+    font-weight: 800;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.reviews-header p {
+    color: #777;
+    font-size: 14px;
+}
+
+/* Swiper Styling */
+.reviews-swiper {
+    padding: 10px 0 40px 0 !important;
+}
+
+.review-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 12px; /* প্যাডিং কমানো হয়েছে */
+    height: 140px; /* কম্প্যাক্ট হাইট */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.review-card:hover {
+    border-color: #ff4b2b;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.review-comment {
+    font-size: 13px;
+    color: #444;
+    font-style: italic;
+    line-height: 1.4;
+    margin: 0 0 8px 0; /* টেক্সট ও ইউজারের মাঝের গ্যাপ কমানো হয়েছে */
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* ২ লাইনের বেশি হলে হাইড হবে */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* User Profile Box */
+.user-profile-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.user-avatar {
+    background-color: #ff4b2b !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    width: 32px !important;
+    height: 32px !important;
+}
+
+.user-meta h4 {
+    margin: 0;
+    font-size: 13px;
+    color: #222;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    white-space: nowrap;
+}
+
+.verified-tick {
+    font-size: 14px !important;
+    color: #1d9bf0;
+}
+
+/* Pagination Dots */
+.swiper-pagination-bullet-active {
+    background: #ff4b2b !important;
+}
+
+/* Responsive Fixes */
+@media (max-width: 600px) {
+    .review-card { height: 130px; padding: 10px; }
+    .review-comment { font-size: 12px; }
+    .reviews-header h2 { font-size: 22px; }
+}

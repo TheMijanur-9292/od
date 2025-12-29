@@ -1,0 +1,62 @@
+/* FAQ.css */
+.faq-section {
+    width: 90%;
+    max-width: 900px; /* পিসিতে খুব বেশি চওড়া হবে না যাতে পড়তে সুবিধা হয় */
+    margin: 60px auto;
+}
+
+.faq-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.faq-header h2 {
+    font-size: 30px;
+    font-weight: 800;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.faq-header p {
+    color: #666;
+    font-size: 15px;
+}
+
+/* Accordion Customization */
+.faq-accordion {
+    box-shadow: none !important; /* ডিফল্ট শ্যাডো রিমুভ */
+    border: 1px solid #eee !important;
+    margin-bottom: 10px !important;
+    border-radius: 8px !important;
+}
+
+.faq-accordion::before {
+    display: none; /* ডিফল্ট ডিভাইডার রিমুভ */
+}
+
+.faq-accordion:hover {
+    border-color: #ff4b2b !important;
+}
+
+.faq-question {
+    font-weight: 700 !important;
+    font-size: 16px !important;
+    color: #333;
+}
+
+.faq-answer {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.6;
+    background-color: #fafafa;
+    border-top: 1px solid #f0f0f0;
+    padding: 20px !important;
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+    .faq-header h2 { font-size: 24px; }
+    .faq-question { font-size: 14px !important; }
+    .faq-answer { font-size: 14px !important; }
+    .faq-section { width: 95%; margin: 40px auto; }
+}

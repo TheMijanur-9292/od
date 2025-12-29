@@ -1,0 +1,118 @@
+/* FlashSale.css */
+.flash-sale-strip {
+    width: 100%;
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    padding: 10px 0;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.flash-wrapper-compact {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.flash-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.flash-tag-small {
+    background: #fff;
+    color: #ff4b2b;
+    padding: 4px 12px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.flash-text-main {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.flash-text-main span {
+    font-weight: 800;
+    font-size: 1.1em;
+    color: #ffd700;
+}
+
+/* Timer Styling */
+.timer-compact {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.timer-numbers {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 6px 15px;
+    border-radius: 6px;
+    font-family: 'Orbitron', sans-serif; /* ডিজিটাল লুকের জন্য */
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.grab-btn-compact {
+    background-color: #ffd700 !important;
+    color: #000 !important;
+    font-weight: bold !important;
+    padding: 6px 25px !important;
+    border-radius: 6px !important;
+    transition: 0.3s !important;
+}
+
+/* --- Laptop & Desktop (Smart Increase) --- */
+@media (min-width: 1025px) {
+    .flash-sale-strip {
+        padding: 15px 0; /* ল্যাপটপে সেকশনটি একটু চওড়া হবে */
+    }
+    .flash-text-main {
+        font-size: 22px; /* টেক্সট বড় করা হলো */
+    }
+    .timer-numbers {
+        font-size: 24px; /* টাইমার বড় করা হলো */
+        padding: 8px 20px;
+    }
+    .grab-btn-compact {
+        font-size: 16px !important;
+        padding: 10px 35px !important;
+    }
+    .flash-tag-small {
+        font-size: 14px;
+        padding: 6px 15px;
+    }
+}
+
+/* --- Mobile View (Compact remains as you liked) --- */
+@media (max-width: 600px) {
+    .flash-wrapper-compact {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .flash-text-main {
+        font-size: 14px;
+        text-align: center;
+    }
+    .timer-compact {
+        font-size: 12px;
+    }
+    .timer-numbers {
+        font-size: 16px;
+        padding: 4px 10px;
+    }
+    .grab-btn-compact {
+        width: 100%;
+    }
+}

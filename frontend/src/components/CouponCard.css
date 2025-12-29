@@ -1,0 +1,283 @@
+/* CouponCard.css */
+
+.material-coupon-card {
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* সব কার্ডের উচ্চতা সমান রাখবে */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.material-coupon-card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transform: translateY(-4px);
+    border-color: #d1d1d1;
+}
+
+/* Card Header - Logo & Verified */
+.card-header {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-logo-container {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #f0f0f0;
+    border-radius: 10px;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+}
+
+.brand-logo-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.verified-badge {
+    background: #e8f5e9;
+    color: #2e7d32;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Card Body - Content */
+.card-body {
+    padding: 0 16px 16px;
+    flex-grow: 1; /* কন্টেন্ট কম হলেও কার্ডের হাইট বজায় রাখবে */
+    display: flex;
+    flex-direction: column;
+}
+
+.coupon-category {
+    font-size: 11px;
+    color: #ff4b2b;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+}
+
+/* Standard Line-Clamp Compatibility for Title */
+.coupon-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 4px 0 8px 0;
+    line-height: 1.4;
+    
+    /* Truncation Logic */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2; /* Standard property */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    
+    /* Fixed height for alignment */
+    height: 44px; 
+}
+
+/* Standard Line-Clamp Compatibility for Description */
+.coupon-desc {
+    font-size: 13px;
+    color: #5d6d7e;
+    line-height: 1.5;
+    margin-bottom: 12px;
+
+    /* Truncation Logic */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2; /* Standard property */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    /* Fixed height to keep buttons in one line */
+    height: 38px;
+}
+
+/* Card Footer - Button */
+.card-footer {
+    padding: 16px;
+    border-top: 1px dashed #e0e0e0;
+    background: #fdfdfd;
+}
+
+.get-deal-btn {
+    width: 100%;
+    background-color: #ff4b2b !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    text-transform: none !important;
+    border-radius: 8px !important;
+    padding: 10px 0 !important;
+    box-shadow: 0 4px 6px rgba(255, 75, 43, 0.2) !important;
+}
+
+.get-deal-btn:hover {
+    background-color: #e6391a !important;
+    box-shadow: 0 6px 12px rgba(255, 75, 43, 0.3) !important;
+}
+
+/* --- Mobile Responsive (2 Cards per Row Adjustments) --- */
+@media (max-width: 600px) {
+    .card-header {
+        padding: 12px;
+    }
+    .brand-logo-container {
+        width: 50px;
+        height: 50px;
+    }
+    .coupon-title {
+        font-size: 14px;
+        height: 40px;
+        margin-bottom: 4px;
+    }
+    .coupon-desc {
+        font-size: 12px;
+        height: 35px;
+    }
+    .verified-badge {
+        font-size: 9px;
+        padding: 3px 6px;
+    }
+    .card-footer {
+        padding: 12px;
+    }
+}/* CouponCard.css */
+
+.material-coupon-card {
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.material-coupon-card:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+    transform: translateY(-3px);
+}
+
+.card-header {
+    padding: 12px 14px 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-logo-container {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    flex-shrink: 0;
+}
+
+.brand-logo-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* ভেরিফায়েড ও ব্র্যান্ড নেম স্ট্যাক */
+.brand-info-stack {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.verified-badge {
+    background: #e8f5e9;
+    color: #2e7d32;
+    font-size: 9px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    text-transform: uppercase;
+}
+
+.brand-name {
+    font-size: 14px;
+    font-weight: 800;
+    color: #1a1a1a;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+/* Body: Content Styling */
+.card-body {
+    padding: 0 14px 10px;
+    flex-grow: 1;
+}
+
+.coupon-category {
+    font-size: 10px;
+    color: #ff4b2b;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.coupon-title {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 2px 0 4px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.coupon-desc {
+    font-size: 12.5px;
+    color: #5d6d7e;
+    margin-bottom: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Footer & Button */
+.card-footer {
+    padding: 8px 14px 14px;
+    border-top: 1px dashed #e0e0e0;
+}
+
+.get-deal-btn {
+    background-color: #ff4b2b !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    text-transform: none !important;
+    border-radius: 6px !important;
+    padding: 6px 0 !important;
+}

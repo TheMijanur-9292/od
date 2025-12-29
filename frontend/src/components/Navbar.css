@@ -1,0 +1,72 @@
+/* General Reset */
+.navbar-container {
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding:  0;
+    position: fixed; /* sticky এর বদলে fixed ব্যবহার করে দেখুন */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* যেহেতু নেভবার fixed, তাই বডিতে একটু প্যাডিং দিতে হবে যাতে কন্টেন্ট নিচে না ঢোকে */
+body {
+    padding-top: 70px; 
+}
+.nav-wrapper {
+    width: 90%; 
+    margin: 0 auto;
+    display: flex;
+    align-items: center; /* এটি লোগো, সার্চবার ও মেনুকে এক লাইনে আনবে */
+    justify-content: space-between;
+}
+
+.logo-section {
+    width: 15%;
+    font-size: 24px;
+    font-weight: bold;
+    color: #1976d2;
+}
+
+.search-section {
+    width: 30%; /* Percentage based */
+}
+
+.nav-links {
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-links li {
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #333;
+    transition: 0.3s;
+}
+
+.nav-links li:hover {
+    color: #1976d2;
+}
+
+.auth-section {
+    width: 10%;
+    text-align: right;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 1024px) {
+    .nav-links, .search-section {
+        display: none; /* Mobile menu handles this */
+    }
+    .logo-section {
+        width: 50%;
+    }
+    .auth-section {
+        width: 50%;
+    }
+}

@@ -1,0 +1,103 @@
+/* ImpactStats.css */
+
+.stats-section {
+    width: 100%;
+    background-color: #fcfcfc;
+    padding: 80px 0; /* প্যাডিং বাড়ানো হলো ল্যাপটপের জন্য */
+    border-top: 1px solid #eee;
+}
+
+/* Header Styling */
+.stats-header {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto 50px; /* নিচের কার্ড থেকে গ্যাপ রাখার জন্য */
+    text-align: center;
+}
+
+.stats-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: #222;
+    margin-bottom: 12px;
+    position: relative;
+    display: inline-block;
+}
+
+.stats-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 25%;
+    right: 25%;
+    height: 3px;
+    background: #ff4b2b; /* টাইটেলের নিচে ছোট একটি আন্ডারলাইন */
+    border-radius: 2px;
+}
+
+.stats-subtitle {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+/* Wrapper & Card */
+.stats-wrapper {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.stat-card {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03); /* হালকা শ্যাডো */
+    text-align: center;
+    transition: 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.stat-icon {
+    color: #ff4b2b;
+    margin-bottom: 15px;
+}
+
+.stat-number {
+    font-size: 32px;
+    font-weight: 800;
+    color: #222;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.stat-label {
+    font-size: 13px;
+    color: #888;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- Responsive Queries --- */
+
+@media (max-width: 1024px) {
+    .stats-title { font-size: 28px; }
+    .stats-wrapper { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+}
+
+@media (max-width: 600px) {
+    .stats-section { padding: 50px 0; }
+    .stats-title { font-size: 24px; }
+    .stats-subtitle { font-size: 14px; }
+    .stats-wrapper { grid-template-columns: 100%; }
+    .stat-number { font-size: 26px; }
+}
