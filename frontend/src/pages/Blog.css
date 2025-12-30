@@ -1,0 +1,170 @@
+/* Blog.css */
+.blog-page-main {
+    background-color: #f6f8f9;
+    min-height: 100vh;
+    padding-bottom: 80px;
+}
+
+.container {
+    width: 95%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+.blog-hero {
+    background: linear-gradient(135deg, #ff4b2b, #ff7b2b);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.blog-hero h1 { font-size: 42px; font-weight: 800; margin-bottom: 10px; }
+
+/* Filter Styling */
+.blog-filter-section {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+}
+
+.blog-filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blog-f-text { font-weight: 700; color: #333; }
+
+.blog-cat-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.blog-cat-btn {
+    padding: 10px 22px;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    background: white;
+    font-weight: 700;
+    color: #555;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.blog-cat-btn.active, .blog-cat-btn:hover {
+    background: #ff4b2b;
+    color: white;
+    border-color: #ff4b2b;
+}
+
+/* Blog Grid */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.blog-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+    border: 1px solid rgba(0,0,0,0.02);
+}
+
+.blog-card:hover {
+    transform: translateY(-8px);
+}
+
+/* থাম্বনেইল ১৬:৯ রেশিও */
+.blog-card-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    position: relative;
+}
+
+.blog-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #ff4b2b;
+    color: white;
+    padding: 5px 12px;
+    font-size: 10px;
+    font-weight: 800;
+    border-radius: 4px;
+}
+
+.blog-card-content { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+
+/* --- Meta Alignment Updated --- */
+.blog-meta { 
+    display: flex; 
+    gap: 15px; 
+    font-size: 12px; 
+    color: #888; 
+    margin-bottom: 12px; 
+}
+
+.blog-meta span {
+    display: flex;         /* আইকন ও লেখা এক সারিতে করার জন্য */
+    align-items: center;   /* ভার্টিক্যালি সেন্টার করার জন্য */
+    gap: 5px;             /* আইকন ও লেখার মাঝে গ্যাপ */
+}
+
+.meta-icon { 
+    font-size: 16px !important; 
+    color: #ff4b2b;        /* আইকন কালার ব্রান্ড থিমের সাথে মেলানো */
+}
+
+.blog-card-content h2 { font-size: 18px; color: #222; margin-bottom: 10px; font-weight: 800; line-height: 1.4; height: 50px; overflow: hidden; }
+.blog-card-content p { font-size: 14px; color: #666; line-height: 1.5; margin-bottom: 15px; }
+.read-more-btn { color: #ff4b2b; font-weight: 800; display: flex; align-items: center; border: none; background: none; cursor: pointer; padding: 0; margin-top: auto; }
+
+/* --- Mobile & Pad Adjustments --- */
+.blog-hamburg-btn {
+    display: none; /* ডেস্কটপে হাইড */
+    background: none;
+    border: 1px solid #ddd;
+    color: #ff4b2b;
+    padding: 6px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .blog-grid { grid-template-columns: repeat(2, 1fr); }
+    .blog-hamburg-btn { display: block; }
+    .blog-cat-list {
+        display: none; /* ডিফল্ট হাইড */
+        flex-direction: column;
+        width: 100%;
+    }
+    .blog-cat-list.show { display: flex; animation: slideDown 0.3s ease; }
+    .blog-cat-btn { width: 100%; text-align: left; border-radius: 8px; }
+}
+
+@media (max-width: 650px) {
+    .blog-grid { grid-template-columns: 1fr; }
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

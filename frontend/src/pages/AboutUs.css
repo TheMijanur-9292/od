@@ -1,0 +1,115 @@
+/* AboutUs.css */
+.about-modern-wrapper { background: #fff; padding-bottom: 80px; overflow-x: hidden; }
+
+/* ✅ Hero Section */
+.about-hero-gradient {
+    background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+    padding: 120px 0 100px;
+    color: white;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+}
+
+.hero-badge {
+    display: inline-block;
+    background: rgba(255, 152, 0, 0.15);
+    color: #f59e0b;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.hero-main-title { font-weight: 900 !important; margin-bottom: 20px !important; line-height: 1.2 !important; font-size: 3.5rem !important; }
+.hero-main-title span { color: #f59e0b; }
+.hero-desc { max-width: 750px; margin: 0 auto !important; opacity: 0.8; font-size: 18px; line-height: 1.6; }
+
+/* ✅ Story Section */
+.story-section { margin-top: 80px; }
+.sub-title { font-weight: 800 !important; margin-bottom: 20px !important; color: #1e293b; }
+.para-text { color: #64748b; font-size: 16px; line-height: 1.8; margin-bottom: 20px !important; }
+
+.story-image-box { position: relative; }
+.story-image-box img { width: 100%; border-radius: 24px; box-shadow: 0 30px 60px rgba(0,0,0,0.12); }
+
+.floating-stat {
+    position: absolute;
+    bottom: -20px;
+    right: -10px;
+    background: #f59e0b;
+    color: white;
+    padding: 20px 35px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(245, 158, 11, 0.35);
+    text-align: center;
+}
+.floating-stat h3 { font-size: 32px; margin: 0; font-weight: 900; }
+.floating-stat p { margin: 0; font-size: 12px; font-weight: 700; text-transform: uppercase; }
+
+/* ✅ Feature Mini List */
+.feature-list-mini { margin-top: 35px; }
+.mini-item { display: flex; gap: 15px; margin-bottom: 25px; }
+.mini-icon { color: #f59e0b; font-size: 35px !important; }
+.mini-item h4 { margin: 0; font-size: 18px; color: #1e293b; font-weight: 700; }
+.mini-item p { margin: 5px 0 0; color: #64748b; font-size: 14px; }
+
+/* ✅ Info Cards Grid */
+.why-us-grid-section { padding: 100px 0; }
+.section-heading.center { text-align: center; font-weight: 800 !important; margin-bottom: 60px !important; color: #1e293b; font-size: 2.5rem !important; }
+
+.info-card-modern {
+    padding: 45px 30px;
+    border-radius: 24px !important;
+    height: 100%;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid #f1f5f9 !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02) !important;
+}
+.info-card-modern:hover { transform: translateY(-12px); box-shadow: 0 30px 60px rgba(0,0,0,0.08) !important; border-color: #f59e0b !important; }
+
+.icon-wrapper-circle {
+    width: 65px;
+    height: 65px;
+    background: #fff8eb;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f59e0b;
+    margin-bottom: 25px;
+}
+.info-card-modern h6 { font-weight: 800 !important; margin-bottom: 15px !important; font-size: 1.2rem !important; }
+.info-card-modern p { color: #64748b; line-height: 1.6; font-size: 14.5px; }
+
+/* ✅ How It Works Banner */
+.how-it-works-banner {
+    background: #0f172a;
+    color: white;
+    padding: 80px 40px;
+    border-radius: 40px;
+    text-align: center;
+    margin-top: 40px;
+}
+.how-it-works-banner .section-heading { color: white; margin-bottom: 60px !important; }
+
+.step-box { position: relative; padding: 20px; }
+.step-num { font-size: 80px; font-weight: 900; opacity: 0.08; position: absolute; top: -30px; left: 50%; transform: translateX(-50%); color: #fff; }
+.step-box h4 { position: relative; z-index: 1; font-size: 22px; margin-bottom: 12px; font-weight: 700; }
+.step-box p { position: relative; z-index: 1; opacity: 0.7; font-size: 15px; line-height: 1.6; }
+
+/* ✅ Responsive Design Fixes */
+@media (max-width: 1024px) {
+    .hero-main-title { font-size: 2.8rem !important; }
+    .story-image-box { margin-bottom: 40px; }
+}
+
+@media (max-width: 768px) {
+    .about-hero-gradient { padding: 80px 20px; }
+    .hero-main-title { font-size: 2.2rem !important; }
+    .hero-desc { font-size: 16px; }
+    .floating-stat { padding: 15px 25px; right: 0; }
+    .how-it-works-banner { padding: 50px 20px; border-radius: 25px; }
+    .section-heading.center { font-size: 1.8rem !important; }
+}

@@ -1,133 +1,154 @@
 /* Footer.css */
-.footer-container {
-    width: 100%;
-    background-color: #ffffff;
-    border-top: 1px solid #eee;
-    padding-top: 50px;
-    margin-top: 80px;
+.main-footer-white {
+    background-color: #ffffff; /* সাদা ব্যাকগ্রাউন্ড */
+    color: #333333; /* কালো টেক্সট */
+    padding: 80px 0 30px;
+    border-top: 1px solid #eeeeee; /* হালকা বর্ডার বিভাজনের জন্য */
 }
 
-/* 1. Newsletter Strip */
-.newsletter-section {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto 50px;
-    background: linear-gradient(90deg, #ff416c, #ff4b2b);
-    border-radius: 15px;
-    padding: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #fff;
-}
-
-.newsletter-content h3 { font-size: 22px; margin: 0; }
-.newsletter-content p { font-size: 14px; opacity: 0.9; margin: 5px 0 0; }
-
-.newsletter-input-box {
-    display: flex;
-    gap: 10px;
-    background: #fff;
-    padding: 5px;
-    border-radius: 8px;
-    width: 40%;
-}
-
-.newsletter-input-box input {
-    border: none;
-    padding: 10px;
-    width: 100%;
-    outline: none;
-    font-size: 14px;
-}
-
-.subscribe-btn {
-    background-color: #222 !important;
-    color: #fff !important;
-    text-transform: none !important;
-    padding: 8px 20px !important;
-}
-
-/* 2. Main Footer Content */
-.footer-main {
-    width: 90%;
-    max-width: 1300px;
-    margin: 0 auto;
+.footer-grid {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr; /* ল্যাপটপে ৪টি কলাম */
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
     gap: 40px;
-    padding-bottom: 40px;
+    margin-bottom: 50px;
 }
 
-.footer-col h4 {
-    font-size: 18px;
-    font-weight: 700;
+/* Brand Section */
+.footer-logo-black {
+    color: #000000;
+    font-size: 28px;
+    font-weight: 900;
     margin-bottom: 20px;
-    color: #222;
-    position: relative;
+}
+.footer-logo-black span {
+    color: #ff9800; /* লোগোর স্প্যান অরেঞ্জ */
 }
 
-.footer-col h4::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 30px;
-    height: 2px;
-    background: #ff4b2b;
-}
-
-.footer-col p {
-    font-size: 14px;
+.footer-desc-black {
+    font-size: 14.5px;
     line-height: 1.6;
-    color: #666;
+    color: #555555;
+    margin-bottom: 25px;
 }
 
-.footer-col ul { list-style: none; padding: 0; }
-.footer-col ul li { margin-bottom: 12px; }
-.footer-col ul li a {
-    text-decoration: none;
-    color: #555;
-    font-size: 14px;
-    transition: 0.3s;
+/* Social Icons Orange */
+.social-links-orange {
+    display: flex;
+    gap: 15px;
 }
-
-.footer-col ul li a:hover { color: #ff4b2b; padding-left: 5px; }
-
-/* Social Icons */
-.social-links { display: flex; gap: 15px; margin-top: 20px; }
-.social-icon {
-    width: 35px;
-    height: 35px;
-    background: #f4f4f4;
-    border-radius: 50%;
+.social-links-orange a {
+    color: #ff9800; /* অরেঞ্জ আইকন */
+    background: #fff8f0; /* হালকা অরেঞ্জ আভা ব্যাকগ্রাউন্ড */
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #444;
+    border-radius: 50%;
     transition: 0.3s;
 }
-
-.social-icon:hover { background: #ff4b2b; color: #fff; }
-
-/* 3. Footer Bottom */
-.footer-bottom {
-    background: #f9f9f9;
-    padding: 20px 0;
-    text-align: center;
-    border-top: 1px solid #eee;
+.social-links-orange a:hover {
+    background: #ff9800;
+    color: #ffffff;
+    transform: translateY(-3px);
 }
 
-.footer-bottom p { font-size: 13px; color: #888; margin: 0; }
+/* Titles and Links */
+.col-title-black {
+    color: #000000;
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    position: relative;
+}
+.col-title-black::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 35px;
+    height: 3px;
+    background: #ff9800;
+}
 
-/* --- Responsive --- */
+.footer-links-black {
+    list-style: none;
+    padding: 0;
+}
+.footer-links-black li {
+    margin-bottom: 12px;
+}
+.footer-links-black a {
+    color: #444444;
+    text-decoration: none;
+    font-size: 14.5px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.footer-links-black a:hover {
+    color: #ff9800;
+    padding-left: 5px;
+}
+
+/* Contact Info Item */
+.contact-item-black {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+    font-size: 14.5px;
+    color: #444444;
+}
+.orange-icon {
+    color: #ff9800; /* কন্টাক্ট আইকন অরেঞ্জ */
+    font-size: 22px !important;
+}
+
+/* Bottom Copyright Bar */
+.footer-bottom-light {
+    border-top: 1px solid #f0f0f0;
+    padding-top: 30px;
+    text-align: center;
+    font-size: 13.5px;
+    color: #777777;
+}
+
+.founder-tag-black {
+    margin-top: 5px;
+}
+.founder-tag-black span {
+    color: #ff9800;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+/* ✅ Full Responsiveness */
 @media (max-width: 1024px) {
-    .footer-main { grid-template-columns: repeat(2, 1fr); }
-    .newsletter-section { flex-direction: column; text-align: center; gap: 20px; }
-    .newsletter-input-box { width: 100%; }
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
 }
 
 @media (max-width: 600px) {
-    .footer-main { grid-template-columns: 100%; gap: 30px; }
-    .footer-container { padding-top: 30px; }
+    .main-footer-white {
+        padding: 60px 0 20px;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+    .footer-col {
+        text-align: center;
+    }
+    .footer-col h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .social-links-orange {
+        justify-content: center;
+    }
+    .contact-item-black {
+        justify-content: center;
+    }
 }

@@ -1,0 +1,172 @@
+/* FashionApparel.css */
+.fashion-page-main {
+    background-color: #f8fafb;
+    padding-bottom: 80px;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 95%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+.fashion-hero-compact {
+    text-align: center;
+    padding: 30px 0 10px;
+}
+
+.hero-tag {
+    color: #ff4b2b;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.fashion-hero-compact h1 { font-size: 38px; font-weight: 900; color: #333; }
+
+/* ✅ Continuous Moving Marquee Animation */
+.fashion-moving-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 30px 0;
+    cursor: grab;
+}
+
+.marquee-infinite-scroll {
+    display: flex;
+    width: max-content;
+    animation: continuous-move 60s linear infinite; /* ধীরগতিতে চলবে */
+}
+
+/* হোভার করলে অ্যানিমেশন থেমে যাবে */
+.fashion-moving-container:hover .marquee-infinite-scroll {
+    animation-play-state: paused;
+}
+
+.brand-3d-box-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 15px;
+    min-width: 100px;
+}
+
+/* ✅ 3D Shadow Box Design */
+.logo-3d-wrapper {
+    width: 95px;
+    height: 95px;
+    background: white;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border: 1px solid #eee;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.06), 0 4px 6px rgba(0,0,0,0.04);
+    transition: 0.3s ease;
+}
+
+.logo-3d-wrapper img { max-width: 100%; max-height: 100%; object-fit: contain; }
+
+.brand-3d-box-card:hover .logo-3d-wrapper {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(255, 75, 43, 0.12);
+    border-color: #ff4b2b;
+}
+
+.brand-3d-box-card span {
+    margin-top: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #555;
+    text-transform: uppercase;
+}
+
+@keyframes continuous-move {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* ✅ Action Bar (Filter + Search) */
+.fashion-action-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.action-left { flex: 1; }
+.filter-title-text { font-size: 20px; font-weight: 800; color: #222; margin-bottom: 15px; }
+
+.filter-pills-row { display: flex; gap: 10px; flex-wrap: wrap; }
+
+.filter-pill-item {
+    padding: 10px 22px;
+    border-radius: 30px;
+    border: 1px solid #e0e0e0;
+    background: white;
+    font-weight: 700;
+    font-size: 13px;
+    color: #444;
+    cursor: pointer;
+}
+
+.filter-pill-item.active { background: #ff4b2b; color: white; border-color: #ff4b2b; }
+
+/* Smart Search Layout */
+.action-right { display: flex; flex-direction: column; gap: 8px; min-width: 320px; }
+.search-smart-label { font-size: 12px; font-weight: 700; color: #ff4b2b; margin-left: 10px; }
+
+.smart-search-input-group {
+    display: flex;
+    align-items: center;
+    background: #f1f3f6;
+    border-radius: 12px;
+    padding: 12px 15px;
+    border: 1px solid transparent;
+}
+
+.smart-search-input-group input {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding-left: 10px;
+    width: 100%;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.search-input-icon { color: #888; font-size: 20px !important; }
+
+/* Grid System 4-3-2 */
+.fashion-coupon-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.hamburg-btn-icon { display: none; background: none; border: 1px solid #ddd; padding: 5px; border-radius: 6px; color: #ff4b2b; }
+
+@media (max-width: 1200px) { .fashion-coupon-grid { grid-template-columns: repeat(3, 1fr); } }
+
+@media (max-width: 900px) {
+    .fashion-action-bar { flex-direction: column; align-items: stretch; }
+    .action-right { order: 2; min-width: 100%; }
+    .action-left { order: 1; }
+    .hamburg-btn-icon { display: block; }
+    .filter-pills-row { display: none; flex-direction: column; width: 100%; gap: 10px; }
+    .filter-pills-row.show { display: flex; }
+    .filter-pill-item { width: 100%; text-align: left; }
+}
+
+@media (max-width: 650px) { .fashion-coupon-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; } }

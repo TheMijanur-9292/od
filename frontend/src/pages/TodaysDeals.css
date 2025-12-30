@@ -1,0 +1,192 @@
+/* TodaysDeals.css */
+.deals-page-main {
+    background-color: #f6f8f9;
+    min-height: 100vh;
+    padding-bottom: 80px;
+}
+
+.container {
+    width: 95%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.deals-hero-section {
+    background: linear-gradient(135deg, #ff4b2b, #ff7b2b);
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Filter Styling */
+.deals-filter-wrapper {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    margin-bottom: 40px;
+}
+
+.deals-filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.f-title { font-weight: 800; font-size: 18px; color: #222; }
+
+.deals-cat-dropdown {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.cat-btn-item {
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 1px solid #eee;
+    background: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    color: #555;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cat-btn-item.active, .cat-btn-item:hover {
+    background: #ff4b2b;
+    color: white;
+    border-color: #ff4b2b;
+}
+
+/* --- The Main Responsive Grid --- */
+.deals-responsive-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Laptop: 4 Cards */
+    gap: 20px;
+}
+
+/* --- Unique Card Design --- */
+.unique-deal-card {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid rgba(0,0,0,0.02);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.unique-deal-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(255, 75, 43, 0.1);
+    border-color: rgba(255, 75, 43, 0.2);
+}
+
+.card-cat-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #fff0ee;
+    color: #ff4b2b;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.card-brand-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.card-brand-box img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border: 1px solid #f0f0f0;
+    padding: 5px;
+    border-radius: 12px;
+    background: white;
+}
+
+.card-brand-box span { font-weight: 800; font-size: 14px; color: #333; }
+
+.card-content-box h4 {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.5;
+    height: 42px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.card-price-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    border-top: 1px dashed #eee;
+    padding-top: 15px;
+}
+
+.discount-val {
+    color: #ff4b2b;
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.card-price-info button {
+    background: #222;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card-price-info button:hover { background: #ff4b2b; }
+
+/* --- Responsive & Hamburger Menu --- */
+.hamburg-toggle {
+    display: none;
+    background: none;
+    border: 1px solid #ddd;
+    color: #ff4b2b;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+@media (max-width: 1024px) {
+    .deals-responsive-grid { grid-template-columns: repeat(3, 1fr); } /* Pad: 3 Cards */
+    .hamburg-toggle { display: block; }
+    .deals-cat-dropdown {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    .deals-cat-dropdown.open { display: flex; animation: slideDown 0.3s ease; }
+    .cat-btn-item { width: 100%; text-align: left; }
+}
+
+@media (max-width: 650px) {
+    .deals-responsive-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; } /* Mobile: 2 Cards */
+    .unique-deal-card { padding: 15px; }
+    .card-content-box h4 { font-size: 12px; height: 36px; }
+    .discount-val { font-size: 13px; }
+    .card-price-info button { padding: 6px 10px; font-size: 11px; }
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
