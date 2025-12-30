@@ -48,9 +48,9 @@ const Footer = () => {
                         <h3 className="col-title-black">Company</h3>
                         <ul className="footer-links-black">
                             <li><Link to="/about-us">About Us</Link></li>
-                            <li><Link to="/terms-&-conditions">Terms & Conditions</Link></li>
-                            <li><Link to="/privacy-&-policy">Privacy Policy</Link></li>
-                            <li><Link to="/contact-us">Contact Us</Link></li>
+    <li><Link to="/terms-&-conditions">Terms & Conditions</Link></li>
+    <li><Link to="/privacy-&-policy">Privacy Policy</Link></li>
+    <li><Link to="/contact-us">Contact Us</Link></li>
                         </ul>
                     </div>
 
@@ -75,7 +75,7 @@ const Footer = () => {
 
                 <div className="footer-bottom-light">
                     <p>&copy; 2025 <strong>OfferDukan</strong>. All Rights Reserved.</p>
-                    <p className="founder-tag-black">Managed by <span>ConsKaptan</span></p>
+                    <p className="founder-tag-black">Managed by <span>MD</span></p>
                 </div>
             </div>
         </footer>

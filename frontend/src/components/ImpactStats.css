@@ -5,6 +5,7 @@
     background-color: #fcfcfc;
     padding: 80px 0; /* প্যাডিং বাড়ানো হলো ল্যাপটপের জন্য */
     border-top: 1px solid #eee;
+    margin-top: 0px;
 }
 
 /* Header Styling */
